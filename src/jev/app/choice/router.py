@@ -15,7 +15,7 @@ router = APIRouter()
 
 
 async def ask_choice(state: State, question: ChoiceQuestion, min_margin: float) -> ChoiceResult:
-    """Send a single choice question and rank the options."""
+    """Send a single choice question and rank the options. """
     raw = await ask_jev(state, {"answer": question.to_api()})
     # A choice answer looks like
     # {"type": "choice", "choice": "billing", "confidence": 1, "probabilities": {"billing": 1, ...}}
