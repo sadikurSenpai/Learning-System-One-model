@@ -1,0 +1,22 @@
+[project]
+name = "jev"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Md. Shadikur Rahman Sheam", email = "mdshadikurrahmansheam@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.16.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+jev = "jev:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
